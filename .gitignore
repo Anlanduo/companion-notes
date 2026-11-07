@@ -1,0 +1,5 @@
+# probe artifacts: results / filled contexts / secrets must not be committed
+probes/results/
+probes/ctx/*.txt
+!probes/ctx/*.txt.example
+.env
