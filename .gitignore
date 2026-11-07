@@ -1,5 +1,9 @@
-# probe artifacts: results / filled contexts / secrets must not be committed
+# 探针跑出来的东西不进仓库
 probes/results/
-probes/ctx/*.txt
-!probes/ctx/*.txt.example
+probe-results-*.json
+
+# 场景上下文是从真实数据脱敏导出的，即使脱敏也不进仓库
+probes/ctx/
+
+# 密钥别进
 .env

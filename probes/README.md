@@ -109,3 +109,18 @@ probes/ctx/*.txt.example 模板，复制成 .txt 再填
 **线上隔离的证据只有一种**：走真实桥接端点（B 组），正控 100%、负控泄露 0。
 直连模型的结果（A 组）只能当诊断。
 
+## 参数表（当前 runner）
+
+```
+必填：PROBE_ENDPOINT / PROBE_KEY / PROBE_MODEL
+场景：PROBE_CONTEXT_DIR（默认 probes/ctx）→ 按题目 scene 读 private.txt / group.txt
+保真：PROBE_SYSTEM_FILE（线上 system prompt 的脱敏版）
+安全：PROBE_ALLOW_MISSING_CONTEXT=1（缺上下文时强行跑，结果只能作诊断）
+超时：PROBE_TIMEOUT_MS（默认 45000）
+重试：PROBE_RETRY（默认 2，仅 429/5xx）
+复现：PROBE_TEMPERATURE（默认 0）、PROBE_SEED
+模式：--dry-run（只打印报文，不联网、不写结果）
+```
+
+**跑之前先 `--dry-run`**：判分口径必须在跑之前写死，事后解释怎么都行。
+
