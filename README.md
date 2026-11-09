@@ -96,3 +96,6 @@ LICENSE                   MIT
 ## License
 
 MIT（仅限代码与文档；不包含任何真实数据）
+
+- [TRADEOFF：理想与落地对账](TRADEOFF.md)
+- [路线复盘（公开版）](docs/11-路线复盘（公开版）.md)
